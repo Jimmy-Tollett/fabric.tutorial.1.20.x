@@ -3,9 +3,7 @@ package net.quazar007.tutorialmod.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -16,6 +14,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.quazar007.tutorialmod.TutorialMod;
+import net.quazar007.tutorialmod.block.custom.MagicBlock;
 
 public class ModBlocks {
 
@@ -47,6 +46,13 @@ public class ModBlocks {
                             .requiresTool()
                             .sounds(BlockSoundGroup.DEEPSLATE)
             ));
+
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create()
+                    .strength(1f)
+            ));
+
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

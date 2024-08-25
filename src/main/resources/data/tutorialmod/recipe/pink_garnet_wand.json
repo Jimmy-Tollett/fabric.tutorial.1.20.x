@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "boat",
+  "pattern": [
+    "  #",
+    " $ ",
+    "$  "
+  ],
+  "key": {
+    "#": {
+      "item": "tutorialmod:pink_garnet"
+    },
+    "$": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "tutorialmod:pink_garnet_wand",
+    "count": 1
+  }
+}
